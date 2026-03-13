@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# dades grans (opcional)
+data/
+
+# entorns
+venv/
+.env
+
+# fitxers temporals
+*.log
+*.tmp
+
