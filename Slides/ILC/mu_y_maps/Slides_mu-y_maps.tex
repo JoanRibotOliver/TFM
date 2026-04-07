@@ -90,7 +90,7 @@
 %=================================================================================================================================
 
 
-\title{TFM - ILC CMB-maps}
+\title{TFM - ILC $\mu y$-maps}
 %\subtitle{Presentación del treball}
 \author{Joan Ribot Oliver}
 \institute{Universidad de Cantabria}
@@ -113,12 +113,14 @@
 %=================================================================================================================================
 
 \begin{frame}[t]{P-ILC Zoomed Maps}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise
   \begin{figure}[H]
     \centering
     % Centratge absolut ignorant marges
     \begin{tikzpicture}[remember picture,overlay]
     \node[at=(current page.center), yshift=-0.4cm] {
-      \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC/mu_y_maps/PCILC_zoomed_maps.pdf}
+      \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC/mu_y_maps/P-ILC_zoomed_maps.pdf}
     };
     \end{tikzpicture}
   \label{fig:PILC_zoomed_maps}
@@ -126,15 +128,49 @@
 \end{frame}
 
 \begin{frame}[t]{H-ILC Zoomed Maps}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise
   \begin{figure}[H]
     \centering
     % Centratge absolut ignorant marges
     \begin{tikzpicture}[remember picture,overlay]
     \node[at=(current page.center), yshift=-0.4cm] {
-      \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC/mu_y_maps/HILC_zoomed_maps.pdf}
+      \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC/mu_y_maps/H-ILC_zoomed_maps.pdf}
     };
     \end{tikzpicture}
   \label{fig:HILC_zoomed_maps}
+  \end{figure}
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[t]{P-ILC Zoomed Maps}
+  \centering
+  3 layers: $\mu$-distorsion, CMB and noise
+  \begin{figure}[H]
+    \centering
+    % Centratge absolut ignorant marges
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-0.4cm] {
+      \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC_no_y/mu_y_maps/P-ILC_zoomed_maps.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:PILC_no_y_zoomed_maps}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[t]{H-ILC Zoomed Maps}
+  \centering
+  3 layers: $\mu$-distorsion, CMB and noise
+  \begin{figure}[H]
+    \centering
+    % Centratge absolut ignorant marges
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-0.4cm] {
+      \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC_no_y/mu_y_maps/H-ILC_zoomed_maps.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:HILC_no_y_zoomed_maps}
   \end{figure}
 \end{frame}
 
