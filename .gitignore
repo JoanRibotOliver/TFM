@@ -8,14 +8,40 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# dades grans (opcional)
+# Dades grans (opcional)
 data/
 
-# entorns
+# Entorns
 venv/
 .env
 
-# fitxers temporals
+## Arxius auxiliars de LaTeX (Generals)
+*.aux
 *.log
+*.out
+*.toc
+*.pdfsync
+*.synctex.gz
+*.blg
+*.bbl
 *.tmp
 
+## Arxius específics de Beamer
+*.nav
+*.snm
+*.vrb
+
+## Altres arxius temporals comuns
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.maf
+*.mtc
+*.mtc0
+*.bcf
+*.run.xml
+
+## Arxius de figures generats (si uses tikz/externalize)
+*.dpth
+*.md5
