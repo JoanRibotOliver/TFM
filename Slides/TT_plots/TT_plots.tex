@@ -1,0 +1,231 @@
+
+\documentclass[10pt]{beamer}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{changepage}
+\usepackage{caption}
+\usepackage{verbatim}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath} % Mathematical symbols.
+\usepackage{siunitx} % SI units.
+\usepackage{hyperref} % Required for referring.
+%\usepackage{minted}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+%\usepackage{enumitem}
+\usepackage[normalem]{ulem} % Per subratllar sense problemes de salts de línia
+\usepackage{subcaption} % El paquet clau per a les subfigures
+\usepackage{float}
+\usepackage{gensymb}
+\usetheme{metropolis}
+% =========================
+% PALETA DE COLORS PASTEL
+% =========================
+\definecolor{pastelSalmon}{HTML}{FFC09F} % #ffc09f
+\definecolor{pastelYellow}{HTML}{FFEE93} % #ffee93
+%\definecolor{pastelCream}{HTML}{FCF5C7}  % #fcf5c7
+\definecolor{pastelCream}{HTML}{FFFBEA}  % #fffbea
+\definecolor{pastelBlue}{HTML}{A0CED9}   % #a0ced9
+\definecolor{pastelGreen}{HTML}{ADF7B6}  % #adf7b6
+\definecolor{pastelPurple}{HTML}{D5AAFF} % #d5aaff
+\definecolor{pastelPink}{HTML}{FFB5E8}   % #ffb5e8
+\definecolor{pastelGray}{HTML}{CFCFC4}   % #cfcfc4
+\definecolor{pastelOrange}{HTML}{FFAB73} % #ffab73
+\definecolor{pastelMint}{HTML}{B9FBC0}   % #b9fbc0
+\definecolor{pastelLavender}{HTML}{E2C6FF} % #e2c6ff
+\definecolor{pastelCyan}{HTML}{9EF0F0}   % #9ef0f0
+\definecolor{pastelDarkForest}{HTML}{009753} % #097534
+\definecolor{pastelLightGray}{HTML}{E8E8E4} % #e8e8e4
+\definecolor{pastelRed}{HTML}{d61010} % #d61010
+
+% =========================
+% CONFIGURACIÓ DE COLORS
+% =========================
+\setbeamercolor{background canvas}{bg=pastelCream}
+\setbeamercolor{normal text}{fg=black,bg=pastelCream}
+\setbeamercolor{structure}{fg=pastelRed}
+\setbeamercolor{frametitle}{bg=pastelRed, fg=white}
+\setbeamercolor{title}{fg=black,bg=pastelGreen}
+\setbeamercolor{subtitle}{fg=black}
+\setbeamercolor{progress bar in head/foot}{fg=pastelSalmon,bg=pastelCream}
+\setbeamercolor{block title}{bg=pastelYellow, fg=black}
+\setbeamercolor{block body}{bg=white, fg=black}
+
+% =========================
+% CONFIGURACIÓ DE FONTS
+% =========================
+\setbeamerfont{title}{size=\Large}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{institute}{size=\small}
+\setbeamerfont{caption}{size=\footnotesize}
+
+\setbeamersize{text margin left=1.5em, text margin right=1.5em}
+% Cambiar "Cuadro" → "Tabla"
+\addto\captionsspanish{%
+  \renewcommand{\tablename}{Tabla}%
+  \renewcommand{\figurename}{Figura}%
+}
+\makeatletter
+\setlength{\metropolis@frametitle@padding}{0pt}
+\setbeamertemplate{frametitle}{
+  \nointerlineskip%
+  \vskip\metropolis@frametitle@padding%
+  \begin{beamercolorbox}[wd=\paperwidth,center]{frametitle}
+    \vbox{}\vskip0ex%
+    \strut\insertframetitle\strut\par
+    \vskip0.75ex
+  \end{beamercolorbox}
+}
+\makeatother
+
+
+%=================================================================================================================================
+%=================================================================================================================================
+
+
+\title{TFM - CILC $\mu y$-maps}
+%\subtitle{Presentación del treball}
+\author{Joan Ribot Oliver}
+\institute{Universidad de Cantabria}
+\date{2026}
+
+
+\begin{document}
+
+\begin{frame}[plain]
+    \titlepage
+  % Logotip a baix a la dreta
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east, xshift=-9.25cm, yshift=0.1cm] 
+      at (current page.south east) {\includegraphics[width=2.5cm]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Slides/logo_uc_800.jpg}};
+  \end{tikzpicture}
+\end{frame}
+
+
+%=================================================================================================================================
+%=================================================================================================================================
+
+
+\begin{frame}[t]{$\mu y$ TT plot: ILC}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise
+  \begin{figure}[H]
+    \centering
+    % Centratge absolut ignorant marges
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-0.4cm] {
+      \includegraphics[width=0.9\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC/TT_plot.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:PCILC_zoomed_maps}
+  \end{figure}
+\end{frame}
+
+
+
+\begin{frame}[t]{$\mu y$ TT plot: CILC}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise
+  \begin{figure}[H]
+    \centering
+    % Centratge absolut ignorant marges
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-0.4cm] {
+      \includegraphics[width=0.9\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC/TT_plot.png}
+      %\includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC/TT_plot.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:HCILC_zoomed_maps}
+  \end{figure}
+\end{frame}
+
+
+
+\begin{comment}
+\begin{frame}[t]{P-ILC Full Sky Maps}
+  \begin{figure}[H]
+    \centering
+    % Centratge absolut ignorant marges
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-0.4cm] {
+      \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/PILC_full_sky_maps.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:PILC_full_sky_maps}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[t]{H-ILC Full Sky Maps}
+  \begin{figure}[H]
+    \centering
+    % Centratge absolut ignorant marges
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-0.4cm] {
+      \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/HILC_full_sky_maps.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:HILC_full_sky_maps}
+  \end{figure}
+\end{frame}
+
+
+
+
+%\begin{frame}[plain]
+%  % Fons d’imatge
+%  \begin{tikzpicture}[remember picture,overlay]
+%    \node[at=(current page.center)] {
+%      \includegraphics[width=\paperwidth,height=\paperheight]{UGC_2885.tif.jpg}
+%    };
+%  \end{tikzpicture}
+%  \begin{tikzpicture}[remember picture,overlay]
+%    \node[at=(current page.center), yshift=3cm] {
+%      \Huge\color{white} Tanda de preguntas
+%    };
+%  \end{tikzpicture}
+%\end{frame}
+
+
+%\begin{frame}{}
+%    \begin{tikzpicture}[remember picture,overlay]
+%    \node[at=(current page.center)] {
+%      \includegraphics[width=\paperwidth,height=\paperheight]{Super_tunning_fork.jpg}
+%    };
+%  \end{tikzpicture}
+%\end{frame}
+
+
+%\begin{frame}[plain]
+%  \begin{tikzpicture}[remember picture,overlay]
+%    \node[at=(current page.center)] {
+%      \includegraphics[width=\paperwidth,height=\paperheight]{UGC_2885_VR.png}
+%    };
+%  \end{tikzpicture}
+%\end{frame}
+
+%\begin{frame}[plain] % "plain" opcional per eliminar marges del tema
+%  \begin{tikzpicture}[remember picture,overlay]
+%    % (x,y) es una posición relativa a toda la diapositiva
+%    \node[anchor=north west, xshift=1cm, yshift=-1.5cm] 
+%      at (current page.north west) {
+%        \parbox{0.9\textwidth}{
+%          \textbf{Resultados:} \\
+%          En esta diapositiva colocamos el texto justo donde queremos.
+%          \begin{itemize}
+%            \item Corresponde a una posición específica.
+%            \item No se moverá aunque cambies el resto del contenido.
+%          \end{itemize}
+%        }
+%      };
+%  \end{tikzpicture}
+%\end{frame}
+\end{comment}
+
+\end{document}
