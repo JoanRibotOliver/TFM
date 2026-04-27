@@ -157,19 +157,87 @@
 \end{frame}
 
 %------------------------------------------------------------------------------------------------------------------------------------
+% mu = 2e-4, noise = 2 muK·arcmin, freqs = [30, 40, 90, 150, 220, 270] GHz
+%------------------------------------------------------------------------------------------------------------------------------------
 
-\begin{frame}[t]{ILC stacked zoomed maps (no $y$ input)}
+\begin{frame}[t]{PILC stacked zoomed maps (no $y$ input)}
   \centering
-  
+  3 layers: $\mu$-distortion, CMB and noise ($2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz
   \begin{figure}[H]
     \centering
-    % Centratge absolut ignorant marges
     \begin{tikzpicture}[remember picture,overlay]
-    \node[at=(current page.center), yshift=-0.4cm] {
-      \includegraphics[width=0.8\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC_no_y/mu_y_maps/Stacked_Patches_ILC_no_y.pdf}
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.65\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC_no_y_2muK/mu_y_maps/Stacking/Stacked_Patches_PILC_no_y.pdf}
     };
     \end{tikzpicture}
-  \label{fig:ILC_stacked_no_y_zoomed_map}
+  \label{fig:PILC_stacked_no_y_zoomed_map_2muK}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[t]{HILC stacked zoomed maps (no $y$ input)}
+  \centering
+  3 layers: $\mu$-distortion, CMB and noise ($2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.65\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC_no_y_2muK/mu_y_maps/Stacking/Stacked_Patches_HILC_no_y.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:HILC_stacked_no_y_zoomed_map_2muK}
+  \end{figure}
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------------------------------
+% mu = 2e-8, noise = 30 muK·arcmin, freqs = [30, 40, 90, 150, 220, 270] GHz
+%------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[t]{PILC stacked zoomed maps (no $y$ input)}
+  \centering
+  3 layers: $\mu$-distortion, CMB and noise ($30 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-8}$, freqs = [30, 40, 90, 150, 220, 270] GHz
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.65\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC_no_y_30muK/mu_y_maps/Stacking/Stacked_Patches_PILC_no_y.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:PILC_stacked_no_y_zoomed_map_30muK}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[t]{HILC stacked zoomed maps (no $y$ input)}
+  \centering
+  3 layers: $\mu$-distortion, CMB and noise ($30 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-8}$, freqs = [30, 40, 90, 150, 220, 270] GHz
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.65\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC_no_y_30muK/mu_y_maps/Stacking/Stacked_Patches_HILC_no_y.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:HILC_stacked_no_y_zoomed_map_30muK}
+  \end{figure}
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[t]{Real data stacked zoomed maps (no $y$ input)}
+  \centering
+  3 layers: $\mu$-distortion, CMB and noise ($2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.65\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC_no_y_2muK/mu_y_maps/Stacking/Stacked_Patches_Real_Data_no_y.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:Real_Data_stacked_no_y_zoomed_map_2muK}
   \end{figure}
 \end{frame}
 
