@@ -117,7 +117,8 @@
 
 \begin{frame}[t]{P-CILC zoomed $y$-maps}
   \centering
-  4 layers: tSZ, $\mu$-distorsion, CMB and noise
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz
   \begin{figure}[H]
     \centering
     % Centratge absolut ignorant marges
@@ -127,6 +128,22 @@
     };
     \end{tikzpicture}
   \label{fig:PCILC_y_zoomed_maps}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[t]{P-CILC zoomed $\mu y$-maps WCS}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz
+  \begin{figure}[H]
+    \centering
+    % Centratge absolut ignorant marges
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-0.4cm] {
+      \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC/y_maps/P-CILC_zoomed_maps_WCS.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:PCILC_y_zoomed_maps_WCS}
   \end{figure}
 \end{frame}
 
@@ -157,7 +174,8 @@
 
 \begin{frame}[t]{P-CILC zoomed $\mu y$-maps}
   \centering
-  4 layers: tSZ, $\mu$-distortion, CMB and noise
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz
   \begin{figure}[H]
     \centering
     % Centratge absolut ignorant marges
@@ -169,6 +187,23 @@
   \label{fig:PCILC_muy_zoomed_maps}
   \end{figure}
 \end{frame}
+
+\begin{frame}[t]{P-CILC zoomed $\mu y$-maps WCS}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz
+  \begin{figure}[H]
+    \centering
+    % Centratge absolut ignorant marges
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-0.4cm] {
+      \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC/mu_y_maps/P-CILC_zoomed_maps_WCS.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:PCILC_muy_zoomed_maps_WCS}
+  \end{figure}
+\end{frame}
+
 
 \begin{comment}
 \begin{frame}[t]{H-CILC zoomed $\mu$-maps}
@@ -186,6 +221,49 @@
   \end{figure}
 \end{frame}
 \end{comment}
+
+%=================================================================================================================================
+%=================================================================================================================================
+% RESIDUAL COMPARISON: P-ILC vs P-CILC
+%=================================================================================================================================
+%=================================================================================================================================
+
+\begin{frame}[t]{$y$-maps Residual Comparison: P-ILC vs P-CILC}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz
+  \begin{figure}[H]
+    \centering
+    % Centratge absolut ignorant marges
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-0.4cm] {
+      \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC_VS_CILC/y_maps/Residual_Comparison_P-CILC_VS_P-ILC.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:y_maps_residual_comparison}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[t]{$\mu y$-maps Residual Comparison: P-ILC vs P-CILC}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz
+  \begin{figure}[H]
+    \centering
+    % Centratge absolut ignorant marges
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-0.4cm] {
+      \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC_VS_CILC/mu_y_maps/Residuals_P-CILC_VS_P-ILC_zoomed.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:mu_y_maps_residual_comparison}
+  \end{figure}
+\end{frame}
+
+
+%=================================================================================================================================
+%=================================================================================================================================
+
 
 
 \begin{comment}
