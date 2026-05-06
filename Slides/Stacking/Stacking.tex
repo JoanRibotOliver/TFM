@@ -48,8 +48,8 @@
 % =========================
 \setbeamercolor{background canvas}{bg=pastelCream}
 \setbeamercolor{normal text}{fg=black,bg=pastelCream}
-\setbeamercolor{structure}{fg=pastelRed}
-\setbeamercolor{frametitle}{bg=pastelRed, fg=white}
+\setbeamercolor{structure}{fg=pastelDarkForest}
+\setbeamercolor{frametitle}{bg=pastelDarkForest, fg=white}
 \setbeamercolor{title}{fg=black,bg=pastelGreen}
 \setbeamercolor{subtitle}{fg=black}
 \setbeamercolor{progress bar in head/foot}{fg=pastelSalmon,bg=pastelCream}
@@ -113,11 +113,13 @@
 
 \begin{frame}[t]{ILC stacked zoomed maps}
   \centering
-  
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-8}$, freqs = [30, 44, 70, 100, 143, 217, 353, 545, 857] GHz \\
+  This doesn't work as it there is a mixing of the $y$ and $\mu$ signals
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[remember picture,overlay]
-    \node[at=(current page.center), yshift=-0.4cm] {
+    \node[at=(current page.center), yshift=-0.9cm] {
       \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC/Stacking/Stacked_Patches_ILC.pdf}
     };
     \end{tikzpicture}
@@ -150,7 +152,7 @@
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[remember picture,overlay]
-    \node[at=(current page.center), yshift=-0.5cm] {
+    \node[at=(current page.center), yshift=-0.6cm] {
       \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC/Stacking/Stacked_Patches_CILC.pdf}
     };
     \end{tikzpicture}
@@ -173,7 +175,7 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}[t]{Comparison y stacked zoomed maps}
+\begin{frame}[t]{Comparison $y$ stacked zoomed maps}
   \centering
   4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
   $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz
@@ -188,7 +190,7 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}[t]{Comparison y stacked zoomed maps}
+\begin{frame}[t]{Comparison $\mu y$ stacked zoomed maps}
   \centering
   4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
   $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz
@@ -374,7 +376,7 @@
 
 %------------------------------------------------------------------------------------------------------------------------------------
 
-\begin{frame}[t]{Real data stacked zoomed maps (no $y$ input)}
+\begin{frame}[t]{Input data stacked zoomed maps (no $y$ input)}
   \centering
   3 layers: $\mu$-distortion, CMB and noise ($2 \mu K \cdot$arcmin)\\
   $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz

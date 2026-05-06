@@ -28,6 +28,7 @@
 % =========================
 \definecolor{pastelSalmon}{HTML}{FFC09F} % #ffc09f
 \definecolor{pastelYellow}{HTML}{FFEE93} % #ffee93
+\definecolor{pastelRadioactiveYellow}{HTML}{FFDE20} % #ffde20
 %\definecolor{pastelCream}{HTML}{FCF5C7}  % #fcf5c7
 \definecolor{pastelCream}{HTML}{FFFBEA}  % #fffbea
 \definecolor{pastelBlue}{HTML}{A0CED9}   % #a0ced9
@@ -43,13 +44,14 @@
 \definecolor{pastelLightGray}{HTML}{E8E8E4} % #e8e8e4
 \definecolor{pastelRed}{HTML}{d61010} % #d61010
 
+
 % =========================
 % CONFIGURACIÓ DE COLORS
 % =========================
 \setbeamercolor{background canvas}{bg=pastelCream}
 \setbeamercolor{normal text}{fg=black,bg=pastelCream}
-\setbeamercolor{structure}{fg=pastelRed}
-\setbeamercolor{frametitle}{bg=pastelRed, fg=white}
+\setbeamercolor{structure}{fg=pastelRadioactiveYellow}
+\setbeamercolor{frametitle}{bg=pastelRadioactiveYellow, fg=white}
 \setbeamercolor{title}{fg=black,bg=pastelGreen}
 \setbeamercolor{subtitle}{fg=black}
 \setbeamercolor{progress bar in head/foot}{fg=pastelSalmon,bg=pastelCream}
@@ -109,7 +111,12 @@
 
 
 %=================================================================================================================================
+% RESIDUAL COMPARISON: P-ILC VS P-CILC for both y and muy maps
 %=================================================================================================================================
+
+%------------------------------------------------------------------------------------------------------------------------------------
+% mu = 2e-4, noise = 2 muK·arcmin, freqs = [30, 40, 90, 150, 220, 270] GHz
+%------------------------------------------------------------------------------------------------------------------------------------
 
 \begin{frame}[t]{$y$-maps Residual Comparison: P-ILC vs P-CILC}
   \centering
@@ -136,15 +143,82 @@
     % Centratge absolut ignorant marges
     \begin{tikzpicture}[remember picture,overlay]
     \node[at=(current page.center), yshift=-0.4cm] {
-      \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC_VS_CILC/mu_y_maps/Residuals_P-CILC_VS_P-ILC_zoomed.pdf}
+      \includegraphics[width=\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/ILC_VS_CILC/mu_y_maps/Residual_Comparison_P-CILC_VS_P-ILC.pdf}
     };
     \end{tikzpicture}
   \label{fig:mu_y_maps_residual_comparison}
   \end{figure}
 \end{frame}
 
-%------------------------------------------------------------------------------------------------------------------------------------
+%=================================================================================================================================
+% TT PLOTS: P-ILC vs P-CILC 
+%=================================================================================================================================
 
+%-------
+% y maps
+%-------
+\begin{frame}[t]{TT plot for $y$ correlation: P-ILC Vs. P-CILC}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r$ = full map
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.75\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC/TT_plots/TT_Plot_y_ILC_VS_CILC.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:PCILC_zoomed_y_maps_0.2muK}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[t]{TT plot for $y$ correlation: P-ILC Vs. P-CILC}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r$ = 10 pixels
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.75\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC/TT_plots/TT_Plot_y_ILC_VS_CILC_10p_radius.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:PCILC_zoomed_y_maps_0.2muK_10p}
+  \end{figure}
+\end{frame}
+
+%----------
+% mu y maps
+%----------
+\begin{frame}[t]{TT plot for $\mu y$ correlation: P-ILC Vs. P-CILC}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r$ = full map
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.75\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC/TT_plots/TT_Plot_muy_ILC_VS_CILC.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:PCILC_zoomed_muy_maps_0.2muK}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[t]{TT plot for $\mu y$ correlation: P-ILC Vs. P-CILC}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r$ = 10 pixels
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.75\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC/TT_plots/TT_Plot_muy_ILC_VS_CILC_10p_radius.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:PCILC_zoomed_muy_maps_0.2muK_10p}
+  \end{figure}
+\end{frame}
 
 
 
