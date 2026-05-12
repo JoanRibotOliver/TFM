@@ -1,0 +1,194 @@
+
+\documentclass[10pt]{beamer}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{changepage}
+\usepackage{caption}
+\usepackage{verbatim}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath} % Mathematical symbols.
+\usepackage{siunitx} % SI units.
+\usepackage{hyperref} % Required for referring.
+%\usepackage{minted}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+%\usepackage{enumitem}
+\usepackage[normalem]{ulem} % Per subratllar sense problemes de salts de línia
+\usepackage{subcaption} % El paquet clau per a les subfigures
+\usepackage{float}
+\usepackage{gensymb}
+\usetheme{metropolis}
+% =========================
+% PALETA DE COLORS PASTEL
+% =========================
+\definecolor{pastelRed}{HTML}{d61010} % #d61010
+\definecolor{pastelSalmon}{HTML}{FFC09F} % #ffc09f
+\definecolor{pastelYellow}{HTML}{FFEE93} % #ffee93
+\definecolor{pastelCream}{HTML}{FFFBEA}  % #fffbea
+\definecolor{pastelBlue}{HTML}{A0CED9}   % #a0ced9
+\definecolor{pastelGreen}{HTML}{ADF7B6}  % #adf7b6
+\definecolor{pastelPurple}{HTML}{D5AAFF} % #d5aaff
+\definecolor{pastelPink}{HTML}{FFB5E8}   % #ffb5e8
+\definecolor{pastelGray}{HTML}{CFCFC4}   % #cfcfc4
+\definecolor{pastelOrange}{HTML}{FFAB73} % #ffab73
+\definecolor{pastelMint}{HTML}{B9FBC0}   % #b9fbc0
+\definecolor{pastelCyan}{HTML}{9EF0F0}   % #9ef0f0
+%\definecolor{pastelCream}{HTML}{FCF5C7}  % #fcf5c7
+\definecolor{pastelLavender}{HTML}{E2C6FF} % #e2c6ff
+\definecolor{pastelLightGray}{HTML}{E8E8E4} % #e8e8e4
+\definecolor{pastelDarkForest}{HTML}{009753} % #097534
+\definecolor{pastelDarkBlue}{HTML}{1E42F7}   % #1e42f7
+
+
+% =========================
+% CONFIGURACIÓ DE COLORS
+% =========================
+\setbeamercolor{background canvas}{bg=pastelCream}
+\setbeamercolor{normal text}{fg=black,bg=pastelCream}
+\setbeamercolor{structure}{fg=pastelDarkBlue}
+\setbeamercolor{frametitle}{bg=pastelDarkBlue, fg=white}
+\setbeamercolor{title}{fg=black,bg=pastelGreen}
+\setbeamercolor{subtitle}{fg=black}
+\setbeamercolor{progress bar in head/foot}{fg=pastelSalmon,bg=pastelCream}
+\setbeamercolor{block title}{bg=pastelYellow, fg=black}
+\setbeamercolor{block body}{bg=white, fg=black}
+
+% =========================
+% CONFIGURACIÓ DE FONTS
+% =========================
+\setbeamerfont{title}{size=\Large}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{institute}{size=\small}
+\setbeamerfont{caption}{size=\footnotesize}
+
+\setbeamersize{text margin left=1.5em, text margin right=1.5em}
+% Cambiar "Cuadro" → "Tabla"
+\addto\captionsspanish{%
+  \renewcommand{\tablename}{Tabla}%
+  \renewcommand{\figurename}{Figura}%
+}
+\makeatletter
+\setlength{\metropolis@frametitle@padding}{0pt}
+\setbeamertemplate{frametitle}{
+  \nointerlineskip%
+  \vskip\metropolis@frametitle@padding%
+  \begin{beamercolorbox}[wd=\paperwidth,center]{frametitle}
+    \vbox{}\vskip0ex%
+    \strut\insertframetitle\strut\par
+    \vskip0.75ex
+  \end{beamercolorbox}
+}
+\makeatother
+
+
+%=================================================================================================================================
+%=================================================================================================================================
+
+
+\title{TFM - $\mu y$ Vs. $y$ Power spectrum plots}
+%\subtitle{Presentación del treball}
+\author{Joan Ribot Oliver}
+\institute{Universidad de Cantabria}
+\date{2026}
+
+
+\begin{document}
+
+\begin{frame}[plain]
+    \titlepage
+  % Logotip a baix a la dreta
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east, xshift=-9.25cm, yshift=0.1cm] 
+      at (current page.south east) {\includegraphics[width=2.5cm]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Slides/logo_uc_800.jpg}};
+  \end{tikzpicture}
+\end{frame}
+
+
+%=================================================================================================================================
+%=================================================================================================================================
+
+%------------------------------------------------------------------------------------------------------------------------------------
+% mu = 2e-4, noise = 0.2 muK·arcmin, freqs = [30, 40, 90, 150, 220, 270] GHz
+%------------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Binned Power Spectrum: Input data Vs. P-CILC}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.9\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC_2e-04/Power_Spectra/Full_Map_Binned.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:Input_Data_VS_PCILC_0.2muK__2e-04}
+  \end{figure}
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------------------------------
+% mu = 5e-4, noise = 0.2 muK·arcmin, freqs = [30, 40, 90, 150, 220, 270] GHz
+%------------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Binned Power Spectrum: Input data Vs. P-CILC}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 5 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.9\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC_5e-04/Power_Spectra/Full_Map_Binned.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:Input_Data_VS_PCILC_0.2muK__5e-04}
+  \end{figure}
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------------------------------
+% mu = 2e-5, noise = 0.2 muK·arcmin, freqs = [30, 40, 90, 150, 220, 270] GHz
+%------------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Binned Power Spectrum: Input data Vs. P-CILC}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 2 \times 10^{-5}$, freqs = [30, 40, 90, 150, 220, 270] GHz
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.9\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC_2e-05/Power_Spectra/Full_Map_Binned.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:Input_Data_VS_PCILC_0.2muK__2e-05}
+  \end{figure}
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------------------------------------
+% mu = 5e-5, noise = 0.2 muK·arcmin, freqs = [30, 40, 90, 150, 220, 270] GHz
+%------------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[t]{Binned Power Spectrum: Input data Vs. P-CILC}
+  \centering
+  4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
+  $\mu = 5 \times 10^{-5}$, freqs = [30, 40, 90, 150, 220, 270] GHz
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.9\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC_5e-05/Power_Spectra/Full_Map_Binned.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:Input_Data_VS_PCILC_0.2muK__5e-05}
+  \end{figure}
+\end{frame}
+
+
+
+\end{document}
