@@ -1,0 +1,112 @@
+\documentclass[11pt, a4paper, oneside]{book}
+
+% Idioma principal en anglès, tal com requereix el TFM
+\usepackage[english]{babel}
+\usepackage{csquotes}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+\usepackage{setspace}
+
+% Configuració de Hyperref per als marcadors del PDF
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=magenta
+}
+
+\usepackage{amsmath,mleftright}
+\DeclarePairedDelimiter\evaluat{.}{\rvert}
+\usepackage[toc,page]{appendix}
+\usepackage{xparse}
+\usepackage{lipsum}
+\usepackage[Lenny]{fncychap}
+\usepackage{multirow}
+\usepackage{graphicx,wrapfig}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{amsfonts}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{amssymb, bm}
+\numberwithin{equation}{section}
+\usepackage{footnote}
+\usepackage{physics}
+\usepackage{tabularx}
+\usepackage{titlesec}
+
+% Ruta genèrica per a les futures figures del teu TFM
+\graphicspath{{Figures/}}
+
+\ChNameVar{\fontsize{20}{60}\selectfont\fontseries{bx}\fontfamily{cmr}}
+\ChNumVar{\fontsize{50}{100}\selectfont\fontfamily{cmr}}
+\pagestyle{fancy}
+
+% Configuració de marges estàndard per a TFM
+\geometry{
+    a4paper,
+    left=30mm,  % Un poc més de marge esquerre per a l'enquadernació si cal
+    right=25mm,
+    top=25mm,
+    bottom=25mm
+}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+%---------------------------------------------------------------------------
+% PORTADA (Basada en l'estructura del teu TFG, adaptada a l'anglès del TFM)
+%---------------------------------------------------------------------------
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    {\huge \bfseries Master's Degree Thesis \par}
+    \vspace{1.5cm}
+    {\LARGE \bfseries Here Goes Your TFM Title \par}
+    \vspace{2cm}
+    {\large \textbf{Author:} Joan Ribot Oliver \par}
+    \vspace{0.5cm}
+    {\large \textbf{Supervisors:} Here Goes Supervisors Name \par}
+    \vspace{2cm}
+    % Aquí pots substituir 'logo_uc_800.jpg' quan el tinguis a la carpeta Figures
+    \includegraphics[width=0.4\textwidth]{logo_uc_800.jpg}\par
+    \vspace{2.5cm}
+    {\large Master in Particle Physics and Cosmology \par}
+    {\large Universidad de Cantabria \par}
+    \vspace{1cm}
+    {\large \today \par}
+\end{titlepage}
+
+\clearpage
+
+%---------------------------------------------------------------------------
+% ÍNDEX (Taula de continguts)
+%---------------------------------------------------------------------------
+\thispagestyle{empty}
+\let\cleardoublepage\clearpage
+\tableofcontents
+\thispagestyle{empty}
+\let\cleardoublepage\clearpage
+
+%---------------------------------------------------------------------------
+% CAPÍTOLS (Carregats des de la carpeta 'Chapters')
+%---------------------------------------------------------------------------
+% Recorda crear aquests fitxers .tex dins de la teva carpeta 'Chapters/'
+\input{Chapters/Introduction}
+\input{Chapters/Simulations}
+\input{Chapters/Methodology}
+\input{Chapters/Results}
+\input{Chapters/Conclusion}
+\input{Chapters/Bibliography}
+
+\clearpage
+\appendix
+
+\end{document}
