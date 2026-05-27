@@ -90,7 +90,7 @@
 %=================================================================================================================================
 
 
-\title{TFM - $\mu y$ Vs. $y$ TT plots}
+\title{TFM - $\mu y$ Vs. $y$: TT plots}
 %\subtitle{Presentación del treball}
 \author{Joan Ribot Oliver}
 \institute{Universidad de Cantabria}
@@ -247,12 +247,12 @@
 \begin{frame}[t]{TT plot: P-CILC}
   \centering
   4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin), s.m. = $10^4$\\
-  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r$ = 10 pixels
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r = 10 \text{ pixels} = 15.0'$
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[remember picture,overlay]
     \node[at=(current page.center), yshift=-1.25cm] {
-      \includegraphics[width=0.75\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC_2e-04/TT_plots/10p/1e+04/TT_Plot_PCILC_10p.pdf}
+      \includegraphics[width=0.75\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC_2e-04/TT_plots/10p/1e+04/TT_Plot_PCILC_10p.pdf}
     };
     \end{tikzpicture}
   \label{fig:PCILC_zoomed_muy_maps_0.2muK_10p_2e-04_10e4}
@@ -321,7 +321,7 @@
 \begin{frame}[t]{TT plot: P-CILC}
   \centering
   4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin), s.m. = $10^4$\\
-  $\mu = 5 \times 10^{-5}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r$ = 10 pixels
+  $\mu = 5 \times 10^{-5}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r = 10 \text{ pixels} = 15.0'$
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[remember picture,overlay]
@@ -396,7 +396,7 @@
 \begin{frame}[t]{TT plot: P-CILC}
   \centering
   4 layers: tSZ, $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin), s.m. = $10^4$\\
-  $\mu = 2 \times 10^{-5}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r$ = 10 pixels
+  $\mu = 2 \times 10^{-5}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r = 10 \text{ pixels} = 15.0'$
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[remember picture,overlay]
@@ -438,7 +438,7 @@
 \begin{frame}[t]{TT plot: P-CILC}
   \centering
   3 layers: tSZ, CMB and noise ($0.2 \mu K \cdot$arcmin), s.m. = $10^4$\\
-  Null test: $\mu = 0$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r$ = 10 pixels
+  Null test: $\mu = 0$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r = 10 \text{ pixels} = 15.0'$
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[remember picture,overlay]
@@ -447,6 +447,90 @@
     };
     \end{tikzpicture}
   \label{fig:PCILC_zoomed_muy_maps_0.2muK_10p_0e+00_10e4}
+  \end{figure}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------------------------------
+% mu = 2e-04, noise = 0.2 muK·arcmin, freqs = [30, 40, 90, 150, 220, 270] GHz, r = 10 pixels, stacked maps = 10^4, BOOTSTRAP
+%------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[t]{TT plot: P-CILC + BOOTSTRAP}
+  \centering
+  4 layers: tSZ, CMB and noise ($0.2 \mu K \cdot$arcmin), s.m. = $10^4$, Bootstrap\\
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r = 10 \text{ pixels} = 15.0'$
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.75\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC_2e-04/TT_plots/10p/TT_Plot_PCILC_10p_Fast_Bootstrap.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:PCILC_zoomed_muy_maps_0.2muK_10p_2e-04_10e4_Bootstrap}
+  \end{figure}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------------------------------
+% mu = 5e-05, noise = 0.2 muK·arcmin, freqs = [30, 40, 90, 150, 220, 270] GHz, r = 10 pixels, stacked maps = 10^4, BOOTSTRAP
+%------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[t]{TT plot: P-CILC + BOOTSTRAP}
+  \centering
+  4 layers: tSZ, CMB and noise ($0.2 \mu K \cdot$arcmin), s.m. = $10^4$, Bootstrap\\
+  $\mu = 5 \times 10^{-5}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r = 10 \text{ pixels} = 15.0'$
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.75\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC_5e-05/TT_plots/10p/TT_Plot_PCILC_10p_Fast_Bootstrap.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:PCILC_zoomed_muy_maps_0.2muK_10p_5e-05_10e4_Bootstrap}
+  \end{figure}
+\end{frame}
+
+
+
+%%------------------------------------------------------------------------------------------------------------------------------------
+%% mu = 2e-05, noise = 0.2 muK·arcmin, freqs = [30, 40, 90, 150, 220, 270] GHz, r = 10 pixels, stacked maps = 10^4, BOOTSTRAP
+%%------------------------------------------------------------------------------------------------------------------------------------
+%
+%\begin{frame}[t]{TT plot: P-CILC + BOOTSTRAP}
+%  \centering
+%  4 layers: tSZ, CMB and noise ($0.2 \mu K \cdot$arcmin), s.m. = $10^4$, Bootstrap\\
+%  $\mu = 2 \times 10^{-5}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r = 10 \text{ pixels} = 15.0'$
+%  \begin{figure}[H]
+%    \centering
+%    \begin{tikzpicture}[remember picture,overlay]
+%    \node[at=(current page.center), yshift=-1.25cm] {
+%      \includegraphics[width=0.75\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC_2e-05/TT_plots/10p/TT_Plot_PCILC_10p_Fast_Bootstrap.pdf}
+%    };
+%    \end{tikzpicture}
+%  \label{fig:PCILC_zoomed_muy_maps_0.2muK_10p_2e-05_10e4_Bootstrap}
+%  \end{figure}
+%\end{frame}
+
+
+
+%------------------------------------------------------------------------------------------------------------------------------------
+% mu = 0e+00, noise = 0.2 muK·arcmin, freqs = [30, 40, 90, 150, 220, 270] GHz, r = 10 pixels, stacked maps = 10^4, BOOTSTRAP
+%------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[t]{TT plot: P-CILC + BOOTSTRAP}
+  \centering
+  4 layers: tSZ, CMB and noise ($0.2 \mu K \cdot$arcmin), s.m. = $10^4$, Bootstrap\\
+  Null test: $\mu = 0$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r = 10 \text{ pixels} = 15.0'$
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center), yshift=-1.25cm] {
+      \includegraphics[width=0.75\paperwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/CILC_0e+00/TT_plots/10p/TT_Plot_PCILC_10p_Fast_Bootstrap.pdf}
+    };
+    \end{tikzpicture}
+  \label{fig:PCILC_zoomed_muy_maps_0.2muK_10p_0e+00_10e4_Bootstrap}
   \end{figure}
 \end{frame}
 
@@ -526,7 +610,7 @@
 \begin{frame}[t]{TT plot: P-ILC no $y$ input}
   \centering
   \textbf{3 layers}: $\mu$-distortion, CMB and noise ($2 \mu K \cdot$arcmin)\\
-  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r$ = 10 pixels
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r = 10 \text{ pixels} = 15.0'$
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[remember picture,overlay]
@@ -541,7 +625,7 @@
 \begin{frame}[t]{TT plot: P-ILC no $y$ input}
   \centering
   \textbf{3 layers}: $\mu$-distortion, CMB and noise ($2 \mu K \cdot$arcmin)\\
-  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r$ = 10 pixels
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r = 10 \text{ pixels} = 15.0'$
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[remember picture,overlay]
@@ -593,7 +677,7 @@
 \begin{frame}[t]{TT plot: P-ILC no $y$ input}
   \centering
   \textbf{3 layers}: $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
-  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r$ = 10 pixels
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r = 10 \text{ pixels} = 15.0'$
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[remember picture,overlay]
@@ -608,7 +692,7 @@
 \begin{frame}[t]{TT plot: P-ILC no $y$ input}
   \centering
   \textbf{3 layers}: $\mu$-distortion, CMB and noise ($0.2 \mu K \cdot$arcmin)\\
-  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r$ = 10 pixels
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r = 10 \text{ pixels} = 15.0'$
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[remember picture,overlay]
@@ -654,13 +738,13 @@
 
 
 %------------------------------------------------------------------------------------------------------------------------------------
-% mu = 2e-04, noise = 0.02 muK·arcmin, freqs = [30, 40, 90, 150, 220, 270] GHz
+% mu = 2e-04, noise = 0.02 muK·arcmin, freqs = [30, 40, 90, 150, 220, 270] GHz, r = 10 pixels
 %------------------------------------------------------------------------------------------------------------------------------------
 
 \begin{frame}[t]{TT plot: P-ILC no $y$ input}
   \centering
   \textbf{3 layers}: $\mu$-distortion, CMB and noise ($0.02 \mu K \cdot$arcmin)\\
-  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r$ = 10 pixels
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r = 10 \text{ pixels} = 15.0'$
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[remember picture,overlay]
@@ -675,7 +759,7 @@
 \begin{frame}[t]{TT plot: P-ILC no $y$ input}
   \centering
   \textbf{3 layers}: $\mu$-distortion, CMB and noise ($0.02 \mu K \cdot$arcmin)\\
-  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r$ = 10 pixels
+  $\mu = 2 \times 10^{-4}$, freqs = [30, 40, 90, 150, 220, 270] GHz, $r = 10 \text{ pixels} = 15.0'$
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[remember picture,overlay]
