@@ -2,6 +2,83 @@
 
 \chapter{Simulations} \label{sec:simulations}
 
-Simulations...
+EVERYTHING HERE IS AI GENERATED, NOT EVEN WITH A PROMPT BUT WITH THE AUTOCOMPLETE FEATURE OF GEMINI COPILOT IN VSCODE. REWRITE IT ALL IN YOUR OWN WORDS.
 
-CMB-HD, frequency channels, noise levels, no foregrounds, etc.
+In this chapter, I will describe the simulations I have performed to generate the sky maps used in this thesis.
+
+The data used in this thesis are based on the CMB-HD sky simulations, which include multiple frequency channels, almost realistic noise levels, and other effects, but no foregrounds.
+These simulations are designed to mimic the observations that will be made by future CMB experiments, allowing us to test our analysis methods and assess their performance in a realistic setting.
+
+
+
+There are two main groups of datasets used in this thesis: the first one is the set of 3-layer maps, and the second one is the set of 4-layer maps.
+The latter consist of the CMB, the thermal SZ effect, the $\mu$-distortions, and instrumental noise,
+while the 3-layer maps are the result of removing one of these components at a time.
+
+This allowed me to test the performance of the Constrained Internal Linear Combination (CILC) method in isolating the $\mu$-distorted SZ signal from the other components, and to assess the impact of each component on the final results.
+
+This served as a proof of concept for the analysis methods used in this thesis, and provided insights into the challenges and limitations of detecting $\mu$-distortions in the SZ signal from galaxy clusters.
+The Internal Linear Combination (ILC), as will be shown in next chapters, is not able to isolate the $\mu$-distorted SZ signal from the other components as there is a leakage of the thermal SZ effect into the reconstructed $\mu$-distorted SZ map,
+which motivates the use of the CILC method to achieve a cleaner separation of these components.
+
+
+The data is first downloaded from \cite[WebSky Extragalactic CMB Mocks]{WebSky_Mocks}, which comes in a HEALPix format with a resolution of $N_{side} = 4096$ and a pixel size of $0.86$ arcmin.
+However, for the seek of computational efficiency and because of the resources available for this thesis, which is basically my laptop, I downgraded the resolution to $N_{side} = 2048$ and a pixel size of $1.72$ arcmin.
+Then, the data is processed with the frequency scaling functions described in \cite{Zegeye2024_mu_distortion}
+to generate the tSZ and the $\mu$-distorted SZ maps, which can be seen in \hyperref[fig:frequency_scaling_functions]{Fig. x}.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.99\textwidth]{/Users/joanribot/Desktop/Física/Màster UC - UIMP/2n semestre/TFM/Codes/Figures/Scaling_Functions/Intensity_and_Temperature_Scalings.pdf}
+    \caption{Frequency scaling functions for the thermal SZ effect [$g(\nu)$] and the $\mu$-distorted SZ effect [$h(\nu)$], as described in \cite{Zegeye2024_mu_distortion}??? sure???.
+    in temperature and intensity units. The null point is around $217$ GHz for the thermal SZ effect, while the $\mu$-distorted SZ effect does not have a null point.
+    REDO THE PLOT WITH THE LATEX FORMAT AND CHANGE THE LEGEND MAKINA.}
+    \label{fig:frequency_scaling_functions}
+\end{figure}
+
+
+The resulting maps are then convolved with a Gaussian beam to simulate the instrumental response, and noise is added to mimic the sensitivity of future CMB experiments and the maps are saved as 'data\_cube' .fits files.
+These are used as input for the component separation methods described in the (\hyperref[sec:methodology]{Methodology}) section,
+and the results are analyzed in the (\hyperref[sec:results]{Results}) section to assess the performance of these methods in isolating the $\mu$-distorted SZ signal from the other components.
+
+% I MUST REMIND THAT WE ARE LOOKING FOR AN IMPRINT OF THE $\mu$-DISTORTIONS IN THE SZ SIGNAL, NOT FOR THE $\mu$-DISTORTIONS THEMSELVES, WHICH ARE MUCH HARDER TO DETECT. THIS IS WHY WE USE THE CILC METHOD TO ISOLATE THE $\mu$-DISTORTED SZ SIGNAL FROM THE OTHER COMPONENTS, AND NOT TO ISOLATE THE $\mu$-DISTORTIONS THEMSELVES.
+
+To select a noise sensitivity level for the simulations, I considered a slightly optimistic estimate of the expected sensitivity of future CMB experiments, which is of the order of less than a $\mu$K-arcmin.
+It is frequency independent for simplicity, and it is applied to all frequency channels. After converting this sensitivity level to the appropriate units for the maps, it ends up being even lower,
+specifically $0.1164$ $\mu$K-arcmin, which is a very low noise level that allows us to test the performance of the component separation methods in a favorable scenario.
+
+
+As this thesis intends to explore the ILC and CILC methods for isolating the $\mu$-distorted SZ signal, the simulations do not pretend to be ultra-realistic,
+but rather to provide a controlled environment to test these methods and understand their limitations and challenges.
+
+
+The simulations in this work were developed and evaluated across three distinct configurations of frequency channel sets, representing different experimental setups and cosmological baselines:
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|l|l|c|}
+        \toprule
+        \textbf{Configuration} & \textbf{Frequency Channels (GHz)} & \textbf{Total Channels} \\
+        \midrule
+        Planck & 30, 44, 70, 100, 143, 217, 353, 545, 857 & 9 \\
+        \midrule
+        Zegeye & 30, 40, 90, 150, 220, 270 & 6 \\
+        \midrule
+        PICO & 21, 25, 30, 36, 43, 52, 62, 75, 90, 108, 129, & 21 \\
+             & 155, 186, 223, 268, 321, 385, 462, 555, 666, 799 & \\
+        \bottomrule
+    \end{tabular}
+    \caption{Frequency channel configurations used in the component separation pipeline.}
+    \label{tab:frequency_channels}
+\end{table}
+
+The temperature of the CMB is set to $T_{CMB} = 2.7255$ K, and the conversion factor from Compton-y to $\mu$K is calculated as $T_{CMB} \times 10^6$.
+
+The main sources of contamination for the $\mu$-distorted SZ signal in these simulations are the thermal SZ effect and the instrumental noise, as there are no foregrounds included in the simulations.
+
+
+%--- GEMINI ---
+%To validate the performance of the component separation pipeline, a controlled set of synthetic observations was generated based on the public simulations provided by the NASA LAMBDA archive \cite[WebSky Extragalactic CMB Mocks]{WebSky_Mocks}.
+%These mock datasets were structured into custom three-dimensional variables ($data\_cube$), tailoring each instance to specific injected amplitudes of the primordial $\mu$-distortion combined with varying instrumental noise sensitivities.
+%It is important to remark that while these simulations capture the dominant extragalactic foregrounds and the core physical behaviors needed to test our methodology, they inevitably represent a simplified projection of the sky.
+%Treating these mocks as our pseudo-real data allows for a rigorous calibration of the algorithm's response, establishing a baseline before dealing with the full systematic complexity of genuine experimental observations.
+
+
