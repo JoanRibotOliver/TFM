@@ -47,7 +47,6 @@ venv/
 *.md5
 
 # Figures generades per codi (per estalviar espai)
-figures_generades/
 *.png
 *.jpg
 *.jpeg
